@@ -6,7 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node scripts/build.mjs",
+    "build": "npm run build:types && npm run build:js",
+    "build:js": "node scripts/build.mjs",
+    "build:types": "tsc --emitDeclarationOnly",
     "type-check": "tsc --noEmit",
     "dev": "node --enable-source-maps dist/index.js"
   },

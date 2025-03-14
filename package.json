@@ -1,0 +1,22 @@
+{
+  "name": "my-esm-typescript-project",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=esm",
+    "type-check": "tsc --noEmit",
+    "dev": "node --enable-source-maps dist/index.js"
+  },
+  "keywords": [],
+  "author": "Oren Levi",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "esbuild": "^0.25.1",
+    "typescript": "^5.8.2"
+  }
+}

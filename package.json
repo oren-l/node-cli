@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=esm",
+    "build": "node scripts/build.mjs",
     "type-check": "tsc --noEmit",
     "dev": "node --enable-source-maps dist/index.js"
   },

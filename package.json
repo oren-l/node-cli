@@ -20,5 +20,8 @@
     "@types/node": "^22.13.10",
     "esbuild": "^0.25.1",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
   }
 }

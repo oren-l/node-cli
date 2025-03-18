@@ -1,16 +1,20 @@
 {
-  "name": "my-esm-typescript-project",
+  "name": "my-cli-project",
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "greet": "dist/greet.js",
+    "bump": "dist/bump.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:types && npm run build:js",
+    "prebuild": "rimraf dist/",
+    "build": "node scripts/build.mjs",
     "build:js": "node scripts/build.mjs",
-    "build:types": "tsc --emitDeclarationOnly",
-    "type-check": "tsc --noEmit",
-    "dev": "node --enable-source-maps dist/index.js"
+    "type-check": "tsc --noEmit"
   },
   "keywords": [],
   "author": "Oren Levi",
@@ -19,10 +23,11 @@
   "devDependencies": {
     "@types/node": "^22.13.10",
     "esbuild": "^0.25.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "concurrently": "^9.1.2"
+    "zx": "^8.4.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

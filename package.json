@@ -10,11 +10,11 @@
     "bump": "dist/bump.js"
   },
   "scripts": {
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist/",
     "build": "node scripts/build.mjs",
-    "build:js": "node scripts/build.mjs",
-    "type-check": "tsc --noEmit"
+    "status": "pnpm run typecheck && pnpm run build"
   },
   "keywords": [],
   "author": "Oren Levi",

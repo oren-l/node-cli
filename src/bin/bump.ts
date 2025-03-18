@@ -4,7 +4,6 @@ import { Version } from "../lib/bump/version";
 import { getCurrentVersion, setCurrentVersion } from "../lib/bump/package";
 
 const argv = process.argv.slice(2);
-console.log(argv);
 
 const versionStr = await getCurrentVersion();
 const version = new Version(versionStr);

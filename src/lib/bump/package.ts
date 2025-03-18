@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-import { Version } from "./bump/version";
+import { Version } from "./version";
 
 async function getPackage() {
   const content = await fs.readFile("package.json", { encoding: "utf-8" });

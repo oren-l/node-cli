@@ -16,6 +16,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist/",
     "build": "node scripts/build.mjs",
+    "postbuild": "pnpm pack --out=examples/.npm-local/my-cli-project.tgz",
+    "update-examples": "node scripts/update-examples.mjs",
     "status": "pnpm run format:check && pnpm run typecheck && pnpm run build"
   },
   "keywords": [],

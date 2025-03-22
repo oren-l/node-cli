@@ -34,5 +34,11 @@ When installing this package via npm, the executables that are available are onl
 
 - `pnpm run typecheck` - check typescript rules
 - `pnpm run test` - not yet implemented
-- `pnpm run build` - builds source to `dist` folder
+- `pnpm run build` - builds source to `dist` folder and installs it in each example (see [Examples](#examples) section)
 - `pnpm run status` - checks project status (typecheck + build passes)
+
+## Examples
+
+Each folder in the `examples` folder is a usage demo of this package.
+
+In each example, a `README.md` file will explain specific details for that example.

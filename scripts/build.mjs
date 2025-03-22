@@ -12,5 +12,8 @@ await esbuild
     minify: process.env.NODE_ENV === "production",
     target: ["node16"],
     logLevel: "info",
+    banner: {
+      js: "#!/usr/bin/env node",
+    },
   })
   .catch(() => process.exit(1));

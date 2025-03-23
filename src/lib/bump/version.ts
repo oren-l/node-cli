@@ -7,6 +7,9 @@ export class Version {
 
   constructor(str: string) {
     const parts = str.split(".").map((strPart) => parseInt(strPart, 10));
+    if (!has3Elements(parts)) {
+      throw new InvalidVersionError(`expected version with 3 components but got ${parts.length}: "${str}"`);
+    }
     this.major = parts[0];
     this.minor = parts[1];
     this.build = parts[2];
@@ -35,3 +38,9 @@ export class Version {
     return clone;
   }
 }
+
+function has3Elements(parts: number[]): parts is [number, number, number] {
+  return parts.length === 3;
+}
+
+export class InvalidVersionError extends Error {}

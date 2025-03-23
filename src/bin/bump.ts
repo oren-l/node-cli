@@ -13,7 +13,7 @@ if (argv.length === 0) {
   process.exit(1);
 }
 
-if (["-h", "--help"].includes(argv[0])) {
+if (["-h", "--help"].includes(argv[0] as string)) {
   showUsage(version);
   process.exit(0);
 }
